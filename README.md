@@ -1,6 +1,6 @@
 # Main-Project-Titles-Cart
 
-STUDENT OF JAMIA 20-24
+STUDENT OF JAMIA 2020-2024
 <br/>
 <br/>
 HEAD 20BCS043 Mohd Haider
