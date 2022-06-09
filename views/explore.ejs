@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="lg:text-[95%] md:text-[85%] sm:text-[80%]">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <title>Titles Cart : Explore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    '2xl': { 'max': '1536px' },
+
+                    'xl': { 'max': '1280px' },
+
+                    'lg': { 'max': '1024px' },
+
+                    'md': { 'max': '768px' },
+
+                    'sm': { 'max': '576px' },
+                },
+                extend: {
+                    colors: {
+                        'primary-blue': '#48E0FD',
+                        'primary-blue-dark': '#03045e',
+                        'primary-blue-light': '#98edff',
+                    },
+                    fontFamily: {
+                        Nunito: ['Nunito', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <script type="module" crossorigin src="assets-explore/index.475c18e1.js"></script>
+    <link rel="icon" type="image/x-icon" href="./Proj-Logo/favicon.png">
+    <link rel="stylesheet" href="assets-explore/index.173895f1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- jquery cdn -->
+</head>
+
+<body class="bg-slate-100 font-Nunito min-w-[36rem]">
+
+    <!-- Wrapper Around The Whole Elements  -->
+    <div class=" w-11/12 m-auto md:w-10/12 pt-16">
+
+        <!-- Navbar -->
+        <%-include('./utils/header.ejs',{Home:false,About:false,Explore:true,Contact:false})%>
+
+        <!-- The Main Content -->
+        <main class="mb-12">
+            <section class="text-center mt-12">
+                <h1 id="h1Explore" class=" text-gray-700 text-4xl font-bold">Explore</h1>
+
+                <p class="text-gray-500 font-semibold mt-2 text-xl">our wide range of notes from around the world
+                </p>
+            </section>
+            <!-- Search Widgets -->
+            <section class="mt-8">
+                <form action="/explore" method="post" class="grid  place-content-center mt-4">
+                    <div
+                        class="search-container flex relative hover:scale-110 duration-500 ease-in-out h-12 shadow-gray-300 shadow-lg">
+                        <span
+                            class="geo-btn text-lg cursor-pointer px-3 flex items-center bg-white hover:text-primary-blue duration-300 ease-in-out"><i
+                                class="fa-solid fa-location-crosshairs"></i></span>
+                        <input value="<%=searchLocation%>" id="searchLocation" name="searchLocation"
+                            placeholder="location" class="w-[20vw] ml-2 px-2 duration-500 ease-in-out outline-cyan-400"
+                            type="text" list="city" autocomplete="off" />
+                        <datalist id="city">
+                            <!-- data from backend-->
+                        </datalist>
+                        <input value="<%=searchItem%>" id="searchItem" name="searchItem" type="text"
+                            placeholder="search..." class="ml-2 px-2 search-here w-[60vw] outline-cyan-400">
+                        <!-- for animation add this class in input fields search-here -->
+                        <button type="submit"
+                            class="btn-search-here absolute -right-2 -top-[0.1rem] bg-cyan-500 px-6 py-3 rounded-lg ">
+                            <!--for animation add this class in button btn-search-here -->
+                            <i class="text-white fa-solid text-xl fa-magnifying-glass "></i>
+                        </button>
+
+                    </div>
+                </form>
+
+                <button
+                    class="show-filter-btn text-gray-500 mt-8 ml-2 hover:scale-110 duration-300 ease-in-out active:scale-95">
+                    <i class="fa-solid fa-sliders text-md"></i><span class="text-[1.2rem] font-bold ml-2">Filter</span>
+                </button>   
+
+                <div class="h-[0.15rem] bg-gray-300 rouned-full "></div>
+                <div class="filter-section  p-4 hidden bg-white shadow-gray-300 shadow-lg">
+                    <div class="flex items-center  gap-16 text-gray-500">
+                        <div>
+                            <label class="">
+                                <h1 class="inline text-lg font-bold">
+                                    Graduate
+                                </h1>
+                            </label>
+                            <br>
+                            <div class="ml-6 font-semibold">
+                                <label>
+                                    <input type="checkbox" value="UG" class="common_selector graduate" />
+                                    Undergraduate
+                                </label>
+                                <br />
+                                <label>
+                                    <input type="checkbox" value="PG" class="common_selector graduate" />
+                                    Postgraduate
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="font-medium text-lg">
+
+                                <h1 class="inline text-lg font-bold">
+                                    Type
+                                </h1>
+                            </label>
+                            <br />
+                            <div class="ml-6 font-semibold">
+                                <label>
+                                    <input type="checkbox" value="Hardcopy" class="common_selector type" />
+                                    Hardcopy
+                                </label>
+                                <br />
+                                <label>
+                                    <input type="checkbox" value="Softcopy" class="common_selector type" />
+                                    Softcopy
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[0.12rem] bg-gray-300 rouned-full "></div>
+
+            </section>
+
+            <%if(rows.length===0){%>
+            <div class="flex items-center justify-center w-full mt-12 h-[40vh]">
+
+                <p class="text-3xl font-bold ">
+                    No Book Found Try Again Later.
+                </p>
+            </div>
+            <%}%>
+                        <section id="card-data"
+                            class="mt-12 cards grid grid-cols-3 gap-8 md:grid-cols-2 sm:grid-cols-1">
+
+                            <% for(var i=0; i<rows.length; i++) { %>
+
+            <div
+                class="card flex flex-col rounded-xl shadow-md shadow-gray-300 overflow-hidden relative bg-white hover:shadow-lg hover:-translate-y-3 transition ease-in-out duration-500">
+                <a href="/explore/<%=rows[i].id%>">
+                    <img src="/post-images/<%=rows[i].images%>"
+                        class="object-cover object-top w-full h-72 p-2 rounded-t-2xl" alt="images">
+                </a>
+                <div
+                    class="absolute h-8 right-4 top-4 bg-white rounded-full flex items-center justify-center px-3 text-cyan-500 font-bold">
+                    <i class="fa-solid fa-indian-rupee-sign mr-1"></i><span>
+                        <%=rows[i].price%>
+                    </span>
+                </div>
+                <div class="detailpy-4 px-5 text-primary-blue mt-2 flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex justify-between">
+                            <h3 class="">
+                                <a href="/user/<%=rows[i].Googleid%>">
+                                    <span class="font-bold">
+                                        <%=rows[i].Name%>
+                                    </span>
+                                </a>
+
+                            </h3>
+                            <div>
+                                <i class="fa-solid fa-star text-yellow-300"></i> <span class="font-semibold">
+                                    4.5/5 </span>
+                                <!-- |<span>340</span> Ratings -->
+                            </div>
+                        </div>
+                        <div class="mt-5 text-primary-blue-dark text-center ">
+                            <a href="/explore/<%=rows[i].id%>">
+                                <h3 class=" text-2xl font-extrabold ">
+                                    <%=rows[i].title%>
+                                </h3>
+                            </a>
+                            <p class="text-md mt-2">
+                                <%=rows[i].description.substring(0,100)+"..."%>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-5 mb-4">
+                        <a href="/explore/<%=rows[i].id%>">
+                            <button
+                                class="bg-cyan-500 text-white font-bold px-4 py-2 rounded-lg hover:scale-110 active:scale-95 duration-300 ease-in-out ">
+                                Know More <i class="ml-1 fa-solid fa-angle-right"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <% } %>
+
+            </section>
+        </main>
+    </div>
+    <!-- footer -->
+    <%-include('./utils/footer.ejs')%>
+
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+            console.log(true);
+        }
+        // for  jquery 
+        cityName(); // function calling for cityName function 
+
+        $('.common_selector').click(function () {
+            let searchLocation = $("#searchLocation").val();
+            let searchItem = $("#searchItem").val();
+
+            let graduate = get_filter('graduate');
+            let type = get_filter('type');
+            function get_filter(class_name) {
+                let filter = [];
+                $('.' + class_name + ':checked').each(function () {
+                    filter.push('"' + $(this).val() + '"');
+                });
+                return filter;
+            }
+            $.ajax({
+                url: "/explore/filter",
+                method: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({ searchLocation, searchItem, graduate, type }),
+                success: function (res) {
+                    console.log("data from filter", res.rows)
+                    $("#card-data").html(``)
+                    $(res.rows).each(function (i, row) {
+                        // console.log("i",row)
+                        $("#card-data").append(`
+                            <div
+                                            class="card flex flex-col rounded-xl shadow-md shadow-gray-300 overflow-hidden relative bg-white hover:shadow-lg hover:-translate-y-3 transition ease-in-out duration-500">
+                                            <a href=${`/explore/${row.id}`}>
+                                                <img src=${`/post-images/${row.images}`}
+                                                    class="object-cover object-top w-full h-72 p-2 rounded-t-2xl"
+                                                    alt="images">
+                                            </a>
+                                            <div
+                                                class="absolute h-8 right-4 top-4 bg-white rounded-full flex items-center justify-center px-3 text-cyan-500 font-bold">
+                                                <i class="fa-solid fa-indian-rupee-sign mr-1"></i><span>
+                                                    ${row.price}
+                                                </span>
+                                            </div>
+                                            <div
+                                                class="detailpy-4 px-5 text-primary-blue mt-2 flex flex-col justify-between h-full">
+                                                <div>
+                                                    <div class="flex justify-between">
+                                                        <h3 class="">
+                                                            <a href=${`/user/${row.Googleid}`}>
+                                                                <span class="font-bold">
+                                                                    ${row.Name}
+                                                                </span>
+                                                            </a>
+
+                                                        </h3>
+                                                        <div>
+                                                            <i class="fa-solid fa-star text-yellow-300"></i> <span
+                                                                class="font-semibold">
+                                                                4.5/5 </span>
+                                                            <!-- |<span>340</span> Ratings -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-5 text-primary-blue-dark text-center ">
+                                                        <a href=${`/explore/${row.id}`}>
+                                                            <h3 class=" text-2xl font-extrabold ">
+                                                                ${row.title}
+                                                            </h3>
+                                                        </a>
+                                                        <p class="text-md mt-2">
+
+                                                             ${(row.description) && row.description.substring(0, 100) + "..."
+                            }
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-center mt-5 mb-4">
+                                                    <a href=${`/explore/${row.id}`}">
+                                                        <button
+                                                            class="bg-cyan-500 text-white font-bold px-4 py-2 rounded-lg hover:scale-110 active:scale-95 duration-300 ease-in-out ">
+                                                            Know More <i class="ml-1 fa-solid fa-angle-right"></i>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                    `)
+                    });
+                }
+            })
+        })
+
+        // city name from backend
+        function cityName() {
+            // console.log("cityName called");
+            $.ajax({
+                url: "/explore/cityName",
+                method: "GET",
+                success: function (res) {
+                    $(res.rows).each(function (i, row) {
+                        // console.log("i",row)
+                        $("#city").append(`
+                                        <option>${row.city}</option>
+                                        `)
+                    })
+                }
+            })
+        }
+    </script>
+
+</body>
+
+</html>

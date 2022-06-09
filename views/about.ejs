@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/about.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@300;400;500&family=Roboto:wght@300;500&display=swap"
+        rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="turn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    '2xl': { 'max': '1536px' },
+
+                    'xl': { 'max': '1280px' },
+
+                    'lg': { 'max': '1024px' },
+
+                    'md': { 'max': '768px' },
+
+                    'sm': { 'max': '576px' },
+                },
+                extend: {
+                    colors: {
+                        'primary-blue': '#48E0FD',
+                        'primary-blue-dark': '#03045e',
+                        'primary-blue-light': '#98edff',
+                    },
+                    fontFamily: {
+                        Nunito: ['Nunito', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="./style/contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="./Proj-Logo/favicon.png">
+    <title>Titles Cart : About</title>
+</head>
+
+<body class="font-Nunito min-w-[40rem]">
+    <!-- Wrapper Around The Whole Elements  -->
+    <div class="wrapper w-11/12 m-auto md:w-10/12 pt-20">
+        <!-- top navigation bar -->
+        <%-include('./utils/header.ejs',{Home:false,About:true,Explore:false,Contact:false})%>
+        <!-- ----Upper Heading----------- -->
+        <div class="top-left-page ">
+
+            <div class="upper-heading">
+
+                <div style="width: fit-content; display: inline-block;">
+                    <h1>"I guess there are never enough books"</h1>
+                    <h2 class="text-right">-John Stienbeck</h2>
+                </div>
+                <br><br>
+                <p>Bookdrive is a portal, which enables easy and comprehensive trade of knowledge. <br>
+                    Provision of the required literature to those in need, <br>or a conducive trade for an end-user who
+                    has
+                    need for one book more than the other, <br> is our primary drive.
+                </p>
+                <br>
+
+            </div>
+
+
+        </div>
+        <!-- -----------------SHOWCASE-------------------- -->
+        <div class="showcase">
+            <div class="box">
+                <div class="upper">
+                    <i class="fa-solid fa-bullseye fa-2x"></i>
+                    <h2>Our Mission</h2>
+                </div>
+                <p>We aspire to serve as a coherent medium, in order to make accessible a flora of fairing books, both
+                    digital and hard-binded, with the temperament of a flow of compiled knowledge.To be able to provide
+                    a
+                    lucid approach to the users, in their attempt to aquire the desired columns of literature, we
+                    advocate
+                    our own way to assert the fundamental need to generate and disseminate knowledge, as intended.</p>
+
+            </div>
+            <div class="box">
+                <div class="upper">
+                    <i class="fa-brands fa-servicestack fa-2x"></i>
+                    <h2>Our Services</h2>
+                </div>
+                <p>We host an assembly of services, as such, that, free knowledge as pdfs and books, as and when,
+                    intended,
+                    by the uploader, is available to all, without bias, whereas, for the contrary, we serve as a channel
+                    which connects two end-users and directs them to hold their conversation as they see fit for a fair
+                    trade for the concerned book or pdf.</p>
+
+            </div>
+            <div class="box">
+                <div class="upper">
+                    <i class="fa-solid fa-message fa-2x"></i>
+                    <h2>Our Message </h2>
+                </div>
+                <p style="font-weight:800;">
+                    "A book is a version of the world. If you do not like it, ignore it; or offer your own version in
+                    return."</p>
+                <p>In this day of modern age, we move to assimilate the likens of the old pulped prints of knowledge,
+                    with
+                    the vernacular of the binary bases, to fuel evermore the desire, need and righteousness of
+                    dissuading
+                    knowledge.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!------------------------Flipbook-------------------------- -->
+    <section>
+        <h1>Meet Our Team</h1>
+        <div class="container">
+
+
+            <div class="flipbook" id="flipbook">
+                <div class="page" style="background-color: white;">
+                    <div class="intro1">
+
+                        <img src="./images/people/haider.jpeg" alt="" draggable="false">
+                        <h2>Mohd Haider</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis,
+                            provident
+                            inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur
+                            cupiditate
+                            quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum
+                            distinctio
+                            officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa
+                            veniam nisi<br></p>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="intro2">
+
+                        <div class="arrow-up">
+                            <img src="./images/arrow/arrow ur.png" alt="Arrow to turn page"
+                                title="Click here to turn page right" draggable="false">
+                        </div>
+                        <img src="./images/people/vicky.jpeg" alt="" draggable="false">
+                        <h2>Vicky Gupta</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis,
+                            provident
+                            inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur
+                            cupiditate
+                            quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum
+                            distinctio
+                            officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa
+                            veniam nisi<br></p>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="page" style="background-color: white;">
+                    <div class="intro1">
+                        <div class="arrow-up">
+                            <img src="./images/arrow/arrow ul.png" alt="Arrow to turn page"
+                                title="Click here to turn page left" draggable="false">
+                        </div>
+                        <img src="./images/people/fazeel.jpeg" alt="" draggable="false">
+                        <h2>Fazeel Rizvi</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis,
+                            provident
+                            inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur
+                            cupiditate
+                            quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum
+                            distinctio
+                            officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa
+                            veniam nisi<br></p>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="intro2">
+                        <div class="arrow-up">
+                            <img src="./images/arrow/arrow ur.png" alt="Arrow to turn page"
+                                title="Click here to turn page right" draggable="false">
+                        </div>
+                        <img src="./images/people/faiz.jpeg" alt="" draggable="false">
+                        <h2>Faiz Iqbal</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis,
+                            provident
+                            inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur
+                            cupiditate
+                            quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum
+                            distinctio
+                            officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa
+                            veniam nisi<br></p>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="page" style="background-color: white;">
+                    <div class="intro1">
+                        <div class="arrow-up">
+                            <img src="./images/arrow/arrow ul.png" alt="Arrow to turn page"
+                                title="Click here to turn page left" draggable="false">
+                        </div>
+                        <img src="./images/people/amit.jpeg" alt="" draggable="false">
+                        <h2>Amit Mishra</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis,
+                            provident
+                            inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur
+                            cupiditate
+                            quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum
+                            distinctio
+                            officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa
+                            veniam nisi<br></p>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="intro2">
+                        <div class="arrow-up">
+                            <img src="./images/arrow/arrow ur.png" alt="Arrow to turn page"
+                                title="Click here to turn page right" draggable="false">
+                        </div>
+                        <img src="./images/people/aatir.jpeg" alt="" draggable="false">
+                        <h2>Aatir Nadim</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis,
+                            provident
+                            inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur
+                            cupiditate
+                            quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum
+                            distinctio
+                            officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa
+                            veniam nisi<br></p>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="page" style="background-color: white;">
+                    <div class="intro1">
+                        <div class="arrow-up">
+                            <img src="./images/arrow/arrow ul.png" alt="Arrow to turn page"
+                                title="Click here to turn page left" draggable="false">
+                        </div>
+                        <img src="./images/people/arish.jpeg" alt="" draggable="false">
+                        <h2>Arish Anwar</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis,
+                            provident
+                            inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur
+                            cupiditate
+                            quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum
+                            distinctio
+                            officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa
+                            veniam nisi<br></p>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="intro2">
+                        <div class="arrow-up">
+                            <img src="./images/arrow/arrow ur.png" alt="Arrow to turn page"
+                                title="Click here to turn page right" draggable="false">
+                        </div>
+                        <img src="./images/people/minhaj.jpeg" alt="" draggable="false">
+                        <h2>Minhaj Khan</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis,
+                            provident
+                            inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur
+                            cupiditate
+                            quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum
+                            distinctio
+                            officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa
+                            veniam nisi<br></p>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="page" style="background-color: white;">
+                    <div class="intro1">
+                        <div class="arrow-up">
+                            <img src="./images/arrow/arrow ul.png" alt="Arrow to turn page"
+                                title="Click here to turn page left" draggable="false">
+                        </div>
+                        <img src="./images/people/arbaz.jpeg" alt="" draggable="false">
+                        <h2>Mohd Arbaz</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis,
+                            provident
+                            inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur
+                            cupiditate
+                            quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum
+                            distinctio
+                            officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa
+                            veniam nisi<br></p>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="intro2">
+                        <img src="./images/people/fazeel.jpeg" alt="" draggable="false">
+                        <h2>Fazeel Rizvi</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis,
+                            provident
+                            inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur
+                            cupiditate
+                            quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum
+                            distinctio
+                            officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa
+                            veniam nisi<br></p>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript">
+            var flipbookEL = document.getElementById('flipbook');
+            window.addEventListener('resize', function (e) {
+                flipbookEL.style.width = '';
+                flipbookEL.style.height = '';
+                $(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
+            });
+
+            $(flipbookEL).turn({
+                autoCenter: false,
+                display: 'single',
+                duration: 1600
+            });
+
+        </script>
+    </section>
+
+    <!-- footer -->
+    <%-include('./utils/footer.ejs')%>
+
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+@import "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  line-height: 1.6;
+  background-image: url('../assets-item-details/Background.7e23ac93.png') ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*________ Some Defaults ________*/
+.container {
+  max-width: 1100px;
+  width: 80%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+/*_____________________ Header _____________________*/
+
+/*_____________________ Main _____________________*/
+main{
+    position: relative;
+    padding-bottom: 3rem;
+}
+/* ___________ Main Heading ___________ */
+.main-heading {
+  margin: 1rem auto 2rem auto;
+  text-align: center;
+  color: rgb(8, 29, 68);
+}
+.main-heading h1 {
+  font-size: 3rem;
+}
+.main-heading p {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+/* ___________ Contact Us ___________ */
+
+.contact-us {
+  background-color: #fff;
+  margin: auto;
+  display: flex;
+  padding: 1rem 1rem;
+  justify-content: space-between;
+  border-radius: 2rem;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ______ Card ______ */
+
+.contact-info {
+  width: 45%;
+  background-image: linear-gradient( 68.4deg,  rgb(0, 186, 211) -0.4%, rgba(99,251,215,1) 100.2% );
+  padding: 3rem 4rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transform: translate(-500px);
+  animation: box-appear 2s ease-in-out forwards;
+}
+@keyframes box-appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity:100%;
+        transform: translate(0);
+    }
+}
+
+.contact-info-top {
+  margin-bottom: 3rem;
+  color: rgb(8, 29, 68);
+}
+.contact-info-top h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(8, 29, 68);
+}
+.contact-info-top p {
+  font-size: 1rem;
+  font-weight: 300;
+
+  margin-top: 1rem;
+  color: rgb(8, 29, 68);
+}
+
+.contact-info-contact ul {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: rgb(8, 29, 68);
+}
+
+.contact-info-contact li {
+  margin-bottom: 2rem;
+}
+
+.social-handles ul {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(231, 231, 231);
+  font-size: 1.8rem;
+  flex-wrap: wrap;
+}
+
+.social-handles a:hover {
+  /* font-weight: bold; */
+  color: rgb(8, 29, 68);
+  border-radius: 3rem;
+}
+
+/* ______ Card ______ */
+.contact-form {
+  width: 55%;
+  padding: 2.5rem 4rem;
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: rgb(153, 153, 153);
+  gap: 3rem;
+}
+.contact-form input {
+  border: none;
+  border-bottom: 0.15rem solid rgb(173, 173, 173);
+  padding: 0.5rem 0 1rem 0;
+  outline: none;
+  width: 100%;
+}
+
+.contact-form h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contact-form-message {
+  grid-column: 1 / span 2;
+}
+
+.contact-form-message textarea {
+  border: none;
+  border-bottom: 0.15rem solid rgb(173, 173, 173);
+  padding: 0.5rem 0 1rem 0;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.contact-form-button {
+  grid-column: 1 / span 2;
+  justify-self: center;
+}
+
+.contact-form-button button {
+  cursor: pointer;
+  border: none;
+  background-color: rgb(8, 29, 68);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* _________________________ Media Queries _______________ */
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 80%;
+  }
+  .contact-us {
+    flex-direction: column-reverse;
+  }
+  .contact-info {
+    width: 100%;
+    margin: auto;
+  }
+  .contact-form {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.notification-styles{
+  font-size: 0.9rem;
+  background-color: white;
+  color: black;
+  padding: 10px 8px;
+  border-left: 20px solid #48E0FD;
+  border-right: 20px solid #48E0FD;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+}

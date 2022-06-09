@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="lg:text-[95%] md:text-[90%] sm:text-[85%]">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titles Cart : Post</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    '2xl': { 'max': '1536px' },
+
+                    'xl': { 'max': '1280px' },
+
+                    'lg': { 'max': '1024px' },
+
+                    'md': { 'max': '768px' },
+
+                    'sm': { 'max': '576px' },
+                },
+                extend: {
+                    colors: {
+                        'primary-blue': '#48E0FD',
+                        'primary-blue-dark': '#03045e',
+                        'primary-blue-light': '#98edff',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        ::-webkit-file-upload-button {
+            color: white;
+            cursor: pointer;
+            background: black;
+            border-radius: 50px;
+            padding: 2px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="./Proj-Logo/favicon.png">
+</head>
+
+<body class="min-w-[36rem]">
+    <!-- Wrapper Around The Whole Elements  -->
+    <div class="wrapper w-11/12 m-auto md:w-10/12 pt-16">
+        <%-include('./utils/header.ejs',{Home:false,About:false,Explore:false,Contact:false})%>
+        <main>
+
+            <form method="post" action="/post" encType="multipart/form-data">
+                <div class=" antialiased px-4 py-2 my-8 flex flex-col justify-center ">
+                    <div class=" mx-auto text-center">
+                        <span class="text-3xl font-semibold">Post Books</span>
+                        <div class="mt-4 bg-white shadow-md  border-black border-x border-b rounded-lg text-left">
+                            <div class="h-2 bg-cyan-400 rounded-t-md border-t border-cyan-400"></div>
+                            <div class="py-6 px-8  grid gap-8  grid-cols-2 md:grid-cols-1 md:gap-4">
+                                <div class="md:mr-5">
+                                    <label class="block mt-2  font-semibold">Title<label>
+                                            <input name="title" type="text" placeholder="Title of Book/Notes"
+                                                class=" mx-2 border w-full h-5 px-3 py-5 mt-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-cyan-600 rounded-md">
+                                </div>
+                                <div>
+                                    <label class="block mt-2  font-semibold">Choose images<label>
+                                            <input type="file" name="images" multiple accept="image/*"
+                                                class="mx-2 w-full  px-3 py-1 bg-cyan-400 text-white mt-3 rounded-lg" />
+                                </div>
+                                <div class="md:mr-5">
+                                    <label class="block mt-2  font-semibold">Price<label>
+                                            <input name="price" type="number" placeholder="Price"
+                                                class="mx-2 border w-full h-5 px-3 py-5 mt-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-cyan-600 rounded-md">
+                                </div>
+                                <div class="">
+                                    <label class="block mt-2  font-semibold">Type<label>
+
+                                            <div class="px-3 py-2 mt-3 mx-2 flex gap-24">
+                                                <div>
+                                                    <label for="Hardcopy">Hardcopy</label>
+                                                    <input type="radio" name="type" value="Hardcopy" id="Hardcopy">
+                                                </div>
+                                                <div>
+                                                    <label for="Softcopy">Softcopy</label>
+                                                    <input type="radio" name="type" value="Softcopy" id="Softcopy">
+                                                </div>
+                                            </div>
+                                </div>
+                                <div class="md:mr-5">
+                                    <label class="block mt-2  font-semibold">No. of pages<label>
+                                            <input name="page" type="number" placeholder="pages"
+                                                class=" mx-2 border w-full h-5 px-3 py-5 mt-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-cyan-600 rounded-md">
+                                </div>
+                                <div class="">
+                                    <label class="block mt-2  font-semibold">Subject<label>
+                                            <input name="subject" type="text" placeholder="Subject"
+                                                class="mx-2 border w-full h-5 px-3 py-5 mt-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-cyan-600 rounded-md">
+                                </div>
+
+                                <div class="md:mr-5">
+                                    <label class="block mt-2  font-semibold">Phone<label>
+                                            <input name="phone" type="text" placeholder="Contact No. "
+                                                class=" mx-2 border w-full h-5 px-3 py-5 mt-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-cyan-600 rounded-md">
+                                </div>
+
+                                <div class="">
+                                    <label class="block mt-2  font-semibold">Location<label>
+                                            <input name="city" type="text" placeholder="Your City"
+                                                class="mx-2 border w-full h-5 px-3 py-5 mt-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-cyan-600 rounded-md">
+                                                <input name="area" type="text" placeholder="Your Area"
+                                                class="mx-2 border w-full h-5 px-3 py-5 mt-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-cyan-600 rounded-md">
+                                </div>
+
+                            </div>
+
+                            <div class=" px-8 ">
+
+                                <div class="">
+                                    <label class="block font-semibold">Graduation<label>
+                                            <div class="py-5 mt-3 mx-2 flex gap-24">
+                                                <div>
+                                                    <label for="ug">Undergraduate</label>
+                                                    <input type="radio" name="graduate" value="UG" id="ug">
+                                                </div>
+                                                <div>
+                                                    <label for="pg">Postgraduate</label>
+                                                    <input type="radio" name="graduate" value="PG" id="pg">
+                                                </div>
+                                            </div>
+                                </div>
+
+                                <div class="">
+                                    <label class="block mt-6 font-semibold">Description<label>
+                                            <textarea name="description" cols="30" rows="10" type="text"
+                                                placeholder="About Book and also give your contact information"
+                                                class="mx-2 border w-full px-3 py-5 mt-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-cyan-600 rounded-md"></textarea>
+                                </div>
+                                <div class="">
+                                    <button type="button"
+                                        class="form-btn mt-5 mb-8 w-full  bg-cyan-500 hover:bg-cyan-600 text-white py-2 px-6 rounded-lg">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%-include('./utils/confirmModal.ejs',{confirmMessage:"submit"})%>
+            </form>
+
+
+
+        </main>
+    </div>
+    <!-- footer -->
+    <%-include('./utils/footer.ejs')%>
+
+</body>
+
+
+</html>

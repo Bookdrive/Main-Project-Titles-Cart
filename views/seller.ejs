@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="lg:text-[95%] md:text-[90%] sm:text-[85%]">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Titles Cart : Seller</title>
+    <base href="../public">
+    <link rel="stylesheet" href="./assets-seller/index.5c5dfcbc.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    '2xl': { 'max': '1536px' },
+
+                    'xl': { 'max': '1280px' },
+
+                    'lg': { 'max': '1024px' },
+
+                    'md': { 'max': '768px' },
+
+                    'sm': { 'max': '576px' },
+                },
+                extend: {
+                    colors: {
+                        'primary-blue': '#48E0FD',
+                        'primary-blue-dark': '#03045e',
+                        'primary-blue-light': '#98edff',
+                    }
+                },
+                fontFamily: {
+                    Nunito: ['Nunito', 'sans-serif']
+                }
+            }
+        }
+    </script>
+
+    <script type="module" crossorigin src="./assets-seller/app.js"></script>
+    <link rel="icon" type="image/x-icon" href="./Proj-Logo/favicon.png">
+</head>
+
+<body class="bg-gray-100 min-w-[36rem] font-Nunito">
+
+    <!-- Wrapper For Whole Elements -->
+    <div class="wrapper w-10/12 m-auto md:w-11/12 pt-20">
+
+        <!-- Navbar -->
+        <%-include('./utils/header.ejs',{Home:false,About:false,Explore:false,Contact:false})%>
+
+        <main>
+            <!-- Author Info -->
+            <section
+                class="seller-detail bg-primary-blue h-64 mt-12 rounded-b-xl text-white sm:flex sm:flex-col sm:justify-between px-3 py-2 sm:mt-24">
+
+                <!-- For Small Screens Image And Author Name-->
+                <div class="info text-center mt-16 hidden sm:flex  sm:flex-col sm:items-center relative">
+                    <div class="text-primary-blue-dark font-bold text-5xl sm:text-[2.5rem] ">
+                        <%=row[0].Name.substring(0, 15)+"..."%>
+                        <span class=" absolute -top-[155%] left-[50%] -translate-x-[50%]">
+                            <img src="<%= row[0].Profile %>"
+                                class="border-[0.4rem] border-gray-100 aspect-square rounded-full w-36" alt="profile">
+                        </span>
+                    </div>
+                    <div class="">
+                        <h4 class="mt-3">Authorize Seller</h4>
+                        <p>We have wide range of computer science notes.</p>
+                    </div>
+                </div>
+
+                <!-- Info -->
+                <div class="flex justify-between sm:items-center mb-2">
+
+                    <!-- Extra Info -->
+                    <div class="rating flex flex-col gap-1 mt-1 ml-1">
+                        <div><i class="fa-solid fa-signs-post"></i><span class="rate font-semibold pr-2">
+                                <%=rows.length%></span>Posts
+                        </div>
+                        <div class="likes"><i class="fa-solid fa-heart"></i> <span
+                                class="like-number font-semibold">136</span> Likes</div>
+                    </div>
+
+                    <!-- Author Name And Images  -->
+                    <div class="info text-center mt-8 mx-2 relative sm:hidden relative">
+                        <h1 class="text-primary-blue-dark font-bold text-5xl sm:text-[2.5rem]">
+                            <%=row[0].Name.substring(0, 12)+".."%></h1>
+                        <div class="sm:hidden">
+                            <h4 class="mt-3">Authorize Seller</h4>
+                            <p>We have wide range of computer science notes.</p>
+                        </div>
+                        <div class="absolute -bottom-[190%] left-[50%] -translate-x-[50%]">
+                            <img src="<%= row[0].Profile %>"
+                                class="border-[0.6rem] border-gray-100 aspect-square rounded-full w-48"
+                                alt="profile pic">
+                        </div>
+                    </div>
+
+                    <!-- Rating Details -->
+                    <div class="mt-1 flex flex-col gap-1">
+
+                        <div><i class="fa-solid fa-star text-yellow-300"></i><span class="rate font-semibold pr-2">
+                                4.8</span>Seller
+                            Rating</div>
+                        <div class="rate-author w-38 ">
+                            <div class="ml-5 peer-first:bg-yellow-50 flex gap-2 items-center">
+                                <button class=""><i
+                                        class="star star1 fa-solid fa-star text-sm hover:scale-125 duration-300 ease-in-out"></i>
+                                </button>
+                                <button class=""><i
+                                        class="star star2 fa-solid fa-star text-sm hover:scale-125 duration-300 ease-in-out">
+                                    </i></button>
+                                <button class=""><i
+                                        class="star star3 fa-solid fa-star text-sm hover:scale-125 duration-300 ease-in-out">
+                                    </i></button>
+                                <button class=""><i
+                                        class="star star4 fa-solid fa-star text-sm hover:scale-125 duration-300 ease-in-out"></i></button>
+                                <button class=""><i
+                                        class="star star5 fa-solid fa-star text-sm hover:scale-125 duration-300 ease-in-out">
+                                    </i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="posts mt-24 mb-24">
+
+                <!-- Posts -->
+                <div class="inline-flex space-x-3 border-b-[0.23rem] border-gray-500 pb-1 ml-4">
+                    <img src="assets-seller/Vector.ffd6f63e.svg" alt=""><span class="text-lg"> Posts</span>
+                </div>
+                <hr class="border-[0.1rem]">
+
+                <!-- Cards -->
+                <div class="cards grid grid-cols-3 gap-8 mt-8 md:grid-cols-2 sm:grid-cols-1">
+                    <%for(let i=0;i<rows.length;i++){%>
+                    <div
+                        class="card flex flex-col rounded-xl shadow-lg shadow-gray-400 overflow-hidden bg-primary-blue">
+                        <a href="/explore/<%=rows[i].id%>"><img src="./post-images/<%=rows[i].images%>"
+                                class="object-cover w-full h-56 object-top" alt="book-img"></a>
+                        <div class="detail h-full flex flex-col justify-between py-4 px-5 text-primary-blue-dark">
+                            <div>
+                                <h1 class="font-bold text-2xl"><i class="fa-solid fa-indian-rupee-sign"></i>
+                                    <%= rows[i].price%></h1>
+                                <p class="text-sm mt-4"><%=rows[i].description.substring(1, 100)+"..."%></p>
+                            </div>
+                            <div class="flex justify-between mt-3 mb-2">
+                                <h3 class="font-semibold"><%=rows[i].postdate%></h3>
+                                <div class="font-semibold">
+                                    <i class="fa-solid fa-star text-yellow-300"></i> 4.5/5
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <%}%>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- footer -->
+    <%-include('./utils/footer.ejs')%>
+</body>
+
+</html>

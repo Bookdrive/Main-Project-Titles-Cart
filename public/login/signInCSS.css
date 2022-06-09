@@ -1,0 +1,154 @@
+@import "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image:url('../images/uppperpage/upperbg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fmain
+{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border: none;
+    padding-bottom: 0.5rem;
+    width: 27.15rem;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    margin: 3.5rem 0;
+    
+    flex-direction: column;
+    box-shadow: -6px 0 white, 6px 0 white,  0px 5px 30px -1px rgb(165, 164, 164);
+    flex-wrap: wrap; 
+}
+
+#sgin
+{
+    display: flex;
+    border: none;
+    margin-bottom: 3.5rem;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-family: monospace;
+}
+
+input[type=text]
+{
+    border: none;
+    width: 83%;
+    height: 2.45rem;
+    background-color: rgb(240, 240, 240);
+    font-size: 1rem;
+    font-family: Andale Mono, monospace;
+    background-image: url("username.png");
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: 0.5rem 0.625rem;
+}
+
+input[type=text]:focus
+{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(187, 187, 187);
+    border-bottom: 1px solid rgb(89, 236, 247);
+    outline: none;
+}
+
+input[type=password]
+{
+    border: none;
+    width: 83%;
+    height: 2.45rem;
+    background-color: rgb(240, 240, 240);
+    font-size: 1rem;
+    font-family: Andale Mono, monospace;
+    background-image: url("pass.png");
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: 0.5rem 0.625rem;
+}
+
+input[type=password]:focus
+{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(187, 187, 187);
+    border-bottom: 1px solid rgb(89, 236, 247);
+    outline: none;
+}
+
+input[type=submit]
+{
+    border: none;
+    font-size: 1.4rem;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    height: 2.45rem;
+    width: 5.5rem;
+    background-color: rgba(20, 191, 221, 0.836);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+
+.divider
+{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0.8rem 1.1rem;
+    font-family: Andale Mono, monospace;
+    color: rgb(116, 116, 116);
+}
+
+.divider::after,
+.divider::before 
+{
+    content: "";
+    border: 1px solid rgb(187, 187, 187);
+    border-bottom: none;
+    flex: 1;
+}
+
+.divider:not(:empty)::before 
+{
+    margin-right: 1rem;
+}
+  
+.divider:not(:empty)::after 
+{
+    margin-left: 1rem;
+}
+
+.ggl
+{
+    width: 3.5rem;
+    height: 3.5rem;
+    background-image:url("googlelogo.png");
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    background-position: center;
+    margin: auto;
+    cursor: pointer;
+    border: none;
+    border-radius: 2rem;
+    background-color: transparent;
+}
+
+.ggl:hover
+{
+    background-color: rgba(187, 187, 187, 0.295);
+}
+
+
+@media (max-width: 550px)
+{
+    html{
+        font-size: 60%;
+    }
+}

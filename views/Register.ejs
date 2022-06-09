@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="lg:text-[95%] md:text-[90%] sm:text-[80%]>
+
+<head>
+  <meta charset=" UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="./assets-register/Register.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      screens: {
+        '2xl': { 'max': '1536px' },
+
+        'xl': { 'max': '1280px' },
+
+        'lg': { 'max': '1024px' },
+
+        'md': { 'max': '768px' },
+
+        'sm': { 'max': '576px' },
+      },
+      extend: {
+        colors: {
+          'primary-blue': '#48E0FD',
+          'primary-blue-dark': '#03045e',
+          'primary-blue-light': '#98edff',
+        },
+        fontFamily: {
+          Nunito: ['Nunito', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<title>Titles Cart : Register</title>
+<link rel="icon" type="image/x-icon" href="./Proj-Logo/favicon.png">
+</head>
+
+<body class="font-Nunito min-w-[36rem]">
+  <!-- Wrapper Around The Whole Elements  -->
+  <div class="wrapper w-11/12 m-auto md:w-10/12 pb-12 pt-16">
+    <%-include('./utils/header.ejs',{Home:false,About:false,Explore:false,Contact:false})%>
+    <div class="fmain">
+      <div id="sgin" class="my-12">
+        <h1 class="font-bold text-4xl text-slate-600">Register</h1>
+      </div>
+      <form action="">
+        <div class="flex flex-col justify-center items-center gap-6 ">
+          <div class="w-[90%] flex justify-center items-center gap-3">
+            <i class="fa-solid fa-user text-xl text-slate-500"></i>
+            <input type="text" name="username" placeholder="Username " class="px-2" />
+          </div>
+          <div class="w-[90%] flex justify-center items-center  gap-3">
+            <i class="fa-solid fa-envelope text-xl text-slate-500"></i>
+            <input type="text" name="Email" placeholder="Email " class="px-2" />
+          </div>
+          <div class="w-[90%] flex justify-center items-center gap-3">
+            <i class="fa-solid fa-key text-xl text-slate-500"></i>
+            <input type="password" name="password" placeholder="Password " class="px-2" />
+          </div>
+          <div class="w-[90%] flex justify-center items-center gap-3">
+            <i class="fa-solid fa-location-dot text-xl text-slate-500"></i>
+            <input type="text" name="Address" placeholder="Address " class="px-2" />
+          </div>
+          <div class="w-[90%] flex justify-center items-center gap-3">
+            <i class="fa-solid fa-city text-xl text-slate-500"></i>
+            <input type="text" name="City" placeholder="City" class="px-2" />
+          </div>
+          <div class="w-[90%] flex justify-center items-center gap-3">
+            <i class="fa-solid fa-phone text-xl text-slate-500"></i>
+            <input type="text" name="Phone No" placeholder="Phone Number" class="px-2" />
+          </div>
+          <div class="w-[90%] flex justify-center items-center mb-2">
+            <input type="submit" value="Sign Up"
+              class="mx-auto hover:scale-110 active:scale-95 duration-300 ease-in-out shadow-md shadow-gray-400" />
+          </div>
+          <div class="w-[90%] text-center">
+            <a href="/login" class="underline text-blue-600 active:text-red-500">Already Registered? Login</a>
+          </div>
+          <div class="w-[90%] flex flex-col justify-center mb-6 gap-4">
+            <div class="divider m-0">or continue with</div>
+            <div class="flex items-center justify-evenly">
+              <button type="button" onclick="window.location.href='https://twitter.com';"
+                class="ggl mx-auto my-3 flex items-center justify-center">
+                <img src="./login/twitter.png" class="h-8" alt="">
+              </button>
+
+              <button type="button" onclick="window.location.href='google'"
+                class="ggl mx-auto bg-[url('./assets-register/googlelogo.png')]"></button>
+
+              <button type="button" onclick="window.location.href='https://github.com';"
+                class="ggl mx-auto my-3 flex items-center justify-center">
+                <img src="./login/github.webp" class="h-10" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- footer -->
+  <%-include('./utils/footer.ejs')%>
+  <script>
+
+  </script>
+</body>
+
+</html>

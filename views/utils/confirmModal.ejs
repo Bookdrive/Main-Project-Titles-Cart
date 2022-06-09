@@ -1,0 +1,32 @@
+<div class="confirm-modal fixed top-0 left-0 bg-black bg-opacity-30 w-full h-full hidden">
+    <div class="fixed top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
+        <div class="w-96 bg-white rounded-lg p-3 shadow-lg shadow-gray-500 flex flex-col justify-between gap-6">
+            <div>
+                <div class="bg-cyan-500 rounded-t-md h-10 flex items-center px-2">
+                    <h1 class="text-white font-bold text-xl">Please Confirm!</h1>
+                </div>
+                <div class="mt-3 px-2">
+                    <p class="text-md font-semibold">Are you sure to <%=confirmMessage%>?</p>
+                </div>
+            </div>
+            <div class="flex flex-row-reverse gap-8">
+                <button type="button"
+                    class="cancel-btn px-4 py-2 bg-white border-4 border-cyan-500 text-cyan-500  font-bold rounded-md hover:scale-110 active:scale-95 duration-300 ease-in-out">Cancel</button>
+                <button type="submit"
+                    class="ok-btn px-4 py-2 bg-cyan-500  text-white font-bold rounded-md hover:scale-110 active:scale-95 duration-300 ease-in-out">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    const confirModal = document.querySelector('.confirm-modal');
+    const formBtn = document.querySelector('.form-btn');
+    const cancelBtn = document.querySelector('.cancel-btn');
+    formBtn.addEventListener('click', () => {
+        confirModal.classList.remove('hidden');
+    })
+
+    cancelBtn.addEventListener('click', () => {
+        confirModal.classList.add('hidden');
+    })
+</script>

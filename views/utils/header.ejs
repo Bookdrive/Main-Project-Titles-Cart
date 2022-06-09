@@ -1,0 +1,158 @@
+<!-- Navbar -->
+<header>
+    <div
+        class="border-b-[0.2rem] border-slate-300 z-10 fixed w-full top-0 left-0  bg-white shadow-md shadow-slate-400 z-[10]">
+        <div class=" flex justify-between item-center m-auto w-11/12 md:w-10/12">
+
+            <div class="flex items-center space-x-1 my-2">
+                <a class="item-center" href="/"><img class="h-10"
+                        src="data:image/png;base64,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"
+                        alt="titles cart" /></a>
+            </div>
+
+            <div class="flex gap-2 md:hidden items-center space-x-4 text-primary-blue-dark">
+
+                <%if(Home) {%>
+                <a class="py-3 px-2 text-lg font-extrabold text-primary-blue border-b-[0.23rem] border-primary-blue-dark scale-125 duration-300 ease-in-out"
+                    href="/">Home</a>
+                <%} else {%>
+                <a class="py-3 px-2 text-lg font-bold hover:text-primary-blue hover:scale-110 active:scale-95 duration-300 ease-in-out"
+                    href="/">Home</a>
+                <%}%>
+
+                            <%if(Contact) {%>
+                <a class="py-3 px-2 text-lg font-extrabold text-primary-blue border-b-[0.23rem] border-primary-blue-dark scale-125  duration-300 ease-in-out"
+                    href="/contact">Contact</a>
+                <%} else {%>
+                <a class="py-3 px-2 text-lg font-bold hover:text-primary-blue hover:scale-110 active:scale-95 duration-300 ease-in-out"
+                    href="/contact">Contact</a>
+                <%}%>
+
+                                        <%if(About) {%>
+                <a class="py-3 px-2 text-lg font-extrabold text-primary-blue border-b-[0.23rem]  border-primary-blue-dark scale-125 duration-300 ease-in-out"
+                    href="/about">About</a>
+                <%} else {%>
+                <a class="py-3 px-2 text-lg font-bold hover:text-primary-blue hover:scale-110 active:scale-95 duration-300 ease-in-out"
+                    href="/about">About</a>
+                <%}%>
+
+                                                    <%if(Explore) {%>
+                <a class="py-3 px-2 text-lg font-extrabold text-primary-blue border-b-[0.23rem] border-primary-blue-dark scale-125 duration-300 ease-in-out"
+                    href="/explore">Explore</a>
+                <%} else {%>
+                <a class="py-3 px-2 text-lg font-bold hover:text-primary-blue hover:scale-110 active:scale-95 duration-300 ease-in-out"
+                    href="/explore">Explore</a>
+                <%}%>
+            </div>
+           
+            <div class="items-center flex space-x-3 my-3">
+                <%let x=true;%>
+                <%if(!user){%>
+                <a class="py-1 px-3 text-white bg-black rounded-full text-lg font-bold hover:scale-110 active:scale-95 duration-300 ease-in-out"
+                    href="/register">Register</a>
+                <a class="py-1 px-3 border border-black rounded-full text-lg font-bold hover:scale-110 active:scale-95 hover:text-white hover:bg-black duration-300 ease-in-out"
+                    href="/login">Log In</a>
+
+                <% x=false;%>
+                <%}%>
+                                <% if(x){%>
+                <a href="/profile/<%=user.id%>"><img
+                        class="rounded rounded-full border border-black  h-10 aspect-square"
+                        src="<%=user.photos[0].value%>" alt="user"></a>
+                <%}%>
+                                        <a class="py-1 px-5 text-white bg-primary-blue rounded-full text-lg font-bold hover:scale-110 active:scale-95 duration-300 ease-in-out"
+                                            href="/post">Post</a>
+                                        <% if(x){ %>
+                <a class="py-1 px-4 bg-red-500 text-white rounded-full text-lg font-bold hover:scale-110 active:scale-95 hover:text-white hover:bg-red-600 duration-300 ease-in-out"
+                    href="/logout">Logout</a>
+                <% }%>
+                <div class="hidden md:flex item-center">
+                    <button class="mobile-menu-button py-1 pr-2 pl-4 duration-500 ease-in-out">
+                        <div class="hamburger-line flex flex-col w-8 h-[1.38rem] justify-between items-center">
+                            <div class="line line-1 w-7 h-[0.15rem] bg-black duration-200 ease-in-out origin-[0%]">
+                            </div>
+                            <div class="line line-2 w-7 h-[0.15rem] bg-black duration-100 ease-in-out">
+                            </div>
+                            <div class="line line-3 w-7 h-[0.15rem] bg-black duration-200 ease-in-out origin-[0]">
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav
+        class="nav-slide hidden md:flex fixed -translate-y-[100%] top-0 left-0 w-full h-[19rem] bg-cyan-400 duration-500 ease-in-out z-[5]">
+        <nav
+            class="nav-slide absolute -translate-y-[100%] top-0 left-0 w-full h-[95%] bg-gray-300 duration-500 ease-in-out">
+            <nav
+                class="nav-slide absolute -translate-y-[100%] top-0 left-0 w-full h-[95%]  bg-white duration-500 ease-in-out">
+                <nav
+                    class="nav-slide absolute -translate-y-[100%] top-20 left-[50%] -translate-x-[50%] duration-500 ease-in-out">
+                    <div class="mobile-menu flex flex-col gap-4 justify-center items-center pt-2">
+                        <%if(Home){%>
+                        <a class="text-cyan-300 scale-125 font-bold text-lg" href="/">Home</a>
+                        <%} else {%>
+                        <a class=" hover:text-cyan-300 hover:scale-110 active:scale-95 font-bold text-lg"
+                            href="/">Home</a>
+                        <%}%>
+                        
+                        <%if(Contact){%>
+                        <a class="text-cyan-300 scale-125 font-bold text-lg" href="/contact">Contact</a>
+                        <%} else {%>
+                        <a class="hover:text-cyan-300 hover:scale-110 active:scale-95 font-bold text-lg"
+                            href="/contact">Contact</a>
+                        <%}%>
+
+                        <%if(About){%>
+                        <a class="text-cyan-300 scale-125 font-bold text-lg" href="/about">About</a>
+                        <%} else {%>
+                        <a class="hover:text-cyan-300 hover:scale-110 active:scale-95 font-bold text-lg"
+                            href="/about">About</a>
+                        <%}%>
+                            
+                        <%if(Explore){%>
+                        <a class="text-cyan-300 scale-125 font-bold text-lg" href="/explore">Explore</a>
+                        <%} else {%>
+                        <a class="hover:text-cyan-300 hover:scale-110 active:scale-95 font-bold text-lg"
+                            href="/explore">Explore</a>
+                        <%}%>
+                    </div>
+                </nav>
+            </nav>
+        </nav>
+    </nav>
+</header>
+<script>
+    const btn = document.querySelector(".mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+    const menuLines = document.querySelectorAll(".line");
+    btn.addEventListener("click", () => {
+        menuLines[0].classList.toggle("rotate-45");
+        menuLines[1].classList.toggle("opacity-0");
+        menuLines[2].classList.toggle("-rotate-45");
+    });
+    const navSlide = document.querySelectorAll('.nav-slide');
+    let delayTiming = [0, 100, 300, 500];
+    let isNavbarVisible = true;
+
+    btn.addEventListener('click', function () {
+        if (isNavbarVisible) {
+            let cntr = 0;
+            navSlide.forEach(slide => {
+                slide.classList.remove('-translate-y-[100%]');
+                slide.classList.remove(`delay-${delayTiming[3 - cntr]}`);
+                slide.classList.add(`delay-${delayTiming[cntr++]}`);
+            })
+        }
+        else {
+            let cntr = 3;
+            navSlide.forEach(slide => {
+                slide.classList.add('-translate-y-[100%]');
+                slide.classList.remove(`delay-${delayTiming[3 - cntr]}`);
+                slide.classList.add(`delay-${delayTiming[cntr--]}`);
+            })
+        }
+        isNavbarVisible = !isNavbarVisible;
+    })
+</script>

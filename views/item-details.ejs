@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="lg:text-[95%] md:text-[90%] sm:text-[85%]">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Title Cart : Item Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    '2xl': { 'max': '1536px' },
+
+                    'xl': { 'max': '1280px' },
+
+                    'lg': { 'max': '1024px' },
+
+                    'md': { 'max': '768px' },
+
+                    'sm': { 'max': '576px' },
+                },
+                extend: {
+                    colors: {
+                        'primary-blue': '#48E0FD',
+                        'primary-blue-dark': '#03045e',
+                        'primary-blue-light': '#98edff',
+                    },
+                    fontFamily: {
+                        Nunito: ['Nunito', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <base href="../public">
+    <script type="module" crossorigin src="./assets-item-details/index.f6898fa8.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets-item-details/index.c8d3d92e.css">
+    <link rel="icon" type="image/x-icon" href="./Proj-Logo/favicon.png">
+</head>
+
+<body class="bg-[url('./assets-item-details/Background.7e23ac93.png')] font-Nunito min-w-[32rem]">
+
+    <!-- Wrapper Around The Whole Elements  -->
+    <div class="wrapper w-11/12 m-auto md:w-10/12 pt-20">
+        <%-include('./utils/header.ejs',{Home:false,About:false,Explore:false,Contact:false})%>
+        <!-- The Main Content -->
+        <main class="mt-4">
+
+            <section class="flex gap-10 my-12 justify-between items-center md:flex-col">
+
+                <!-- Heading Visible Only For Small Screen -->
+                <div class="hidden md:block bg-white px-6 py-8 shadow-lg shadow-gray-400 rounded-xl">
+                    <h1 class="text-2xl text-primary-blue-dark font-bold"><%=rows[0].title%>s</h1>
+                </div>
+
+                <!-- Image Part Of The Item -->
+                <div class="notes-image-button-wrapper flex gap-8 flex-col basis-1/2">
+
+                    <div
+                        class="notes-image justify-between flex bg-white px-5 py-6 gap-4 h-[32rem] shadow-lg shadow-gray-400 rounded-xl ">
+
+                        <!-- Small Images  -->
+                        <div class="flex flex-col  basis-1/5 gap-4">
+                            <button class="side-image shadow-sm shadow-gray-400 ">
+                                <div class="highlight-selected h-24"><img src="./post-images/<%=rows[0].images%>"
+                                        class=" object-cover object-top h-full w-full" alt="">
+                                </div>
+                            </button>
+                            <% for(let i=0;i<row.length;i++) { %>
+                            <button class="side-image shadow-sm shadow-gray-400">
+                                <div class="h-24"><img src="./post-images/<%=row[i].image%>"
+                                        class=" object-cover object-top h-full w-full" alt="">
+                                </div>
+                            </button>
+                            <% }%>
+                        </div>
+
+                        <!-- Main Image To Show -->
+                        <div class="main-image basis-9/12 flex shadow-md shadow-gray-400">
+                            <img src="./post-images/<%=rows[0].images%>" class="h-full w-full object-cover object-top"
+                                alt="">
+                        </div>
+
+                        <!-- Like And Share -->
+                        <div class="flex flex-col gap-4 text-primary-blue ">
+                            <button class="hover:scale-125 active:scale-95 duration-300 ease-in-out">
+                                <i class="fa-solid fa-heart text-lg"></i>
+                            </button>
+                            <button
+                                onclick="location.href='https://api.whatsapp.com/send?text= Book Name: <%=rows[0].title%>\n  Price : <%=rows[0].price%> Description : <%=rows[0].description%> Link : localhost:3000/explore/<%=rows[0].id%> ';"
+                                class="hover:scale-125 active:scale-95 duration-300 ease-in-out">
+                                <i class="fa-solid fa-share-nodes text-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info About The Item -->
+                <div class="flex flex-col  gap-10 basis-1/2 md:flex-col-reverse md:w-full">
+
+                    <div class="bg-white px-6 py-8 shadow-lg shadow-gray-400 rounded-xl">
+                        <div class="md:hidden">
+                            <h1 class="text-2xl text-primary-blue-dark font-bold"><%=rows[0].title%></h1>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-12 md:mt-0">
+                            <div class="flex flex-col">
+                                <div class="flex text-primary-blue-dark items-center">
+                                    <p class="text-primary-blue mr-2">Price : </p> <i
+                                        class="fa-solid fa-indian-rupee-sign text-xl"></i>
+                                    <p class=" text-xl font-bold ml-1"><%=rows[0].price%></p>
+                                </div>
+                                <div class=" text-primary-blue mt-4">
+                                    <p class="text-md">Posted By : <a href="/user/<%=rows[0].Googleid%>"> <span
+                                                class="font-bold"> <%=rows[0].Name%></span></a></p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class=" flex "><i class="fa-solid fa-star text-yellow-400 mr-2"></i>
+                                    <p class="text-sm text-primary-blue">4.5/5 | 100 Ratings</p>
+                                </div>
+                                <div class="rate-author w-36 mt-4">
+                                    <div class=" peer-first:bg-yellow-50 flex justify-around items-center">
+                                        <button class=""><i
+                                                class="star star1 fa-solid fa-star text-md hover:scale-125 scale-95 duration-300 ease-in-out"></i>
+                                        </button>
+                                        <button class=""><i
+                                                class="star star2 fa-solid fa-star text-md hover:scale-125 scale-95 duration-300 ease-in-out">
+                                            </i></button>
+                                        <button class=""><i
+                                                class="star star3 fa-solid fa-star text-md hover:scale-125 scale-95 duration-300 ease-in-out">
+                                            </i></button>
+                                        <button class=""><i
+                                                class="star star4 fa-solid fa-star text-md hover:scale-125 scale-95 duration-300 ease-in-out"></i></button>
+                                        <button class=""><i
+                                                class="star star5 fa-solid fa-star text-md hover:scale-125 scale-95 duration-300 ease-in-out">
+                                            </i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <hr class="border-[0.1rem] mt-8">
+
+                        <div class="flex mt-8 mb-4 justify-between px-2 lg:flex-col lg:items-center lg:gap-4">
+
+                            <div class="flex gap-6 ml-2 w-full justify-between">
+                                <div class="flex gap-2 items-center hover:scale-125 duration-300 ease-in-out"><i
+                                        class="fa-solid fa-calendar-days text-xl text-primary-blue hover:text-cyan-400"></i>
+                                    <div>
+                                        <p class="text-xs text-primary-blue-light hover:text-cyan-400">Date Posted</p>
+                                        <p class="text-sm text-primary-blue hover:text-cyan-400"><%=rows[0].postdate%>
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="https://www.google.com/maps/search/?api=1&query=<%=rows[0].city%> <%=rows[0].area%>">
+                                    <div class="flex gap-2 items-center hover:scale-125 duration-300 ease-in-out">
+                                        <div>
+                                            <i
+                                                class="fa-solid fa-location-dot text-xl text-primary-blue hover:text-cyan-400"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-primary-blue-light hover:text-cyan-400">Location</p>
+                                            <p class="text-sm text-primary-blue hover:text-cyan-400">
+                                                <%=rows[0].area%> <%=rows[0].city%></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Buttons -->
+                    <div class="flex justify-evenly lg:flex-col lg:items-center ">
+                        <button
+                            onclick="location.href='https://api.whatsapp.com/send?phone=+91<%=rows[0].phone%>&text= Hello I would Like to Buy this <%=rows[0].title%> book at price of Rs<%=rows[0].price%>  ';"
+                            class="bg-primary-blue hover:scale-110 active:scale-95 duration-300 ease-in-out text-white px-4 py-3 w-2/5 font-bold text-lg rounded-lg lg:w-full lg:mb-6">Chat
+                            With Seller</button>
+                        <button onclick=createNotifications() id="myInput" value="<%=rows[0].phone%>"
+                            class="bg-primary-blue-dark hover:scale-110 active:scale-95 duration-300 ease-in-out text-white px-4 py-3 w-2/5 font-bold text-lg rounded-lg lg:w-full">Contact</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Description  -->
+            <section class="">
+                <div class="bg-white px-6 py-8 shadow-lg shadow-gray-400 rounded-xl">
+                    <h1 class="text-2xl font-bold text-primary-blue">Discription</h1>
+                    <hr class="border-[0.1rem] mt-4">
+                    <p class="mt-4 text-slate-500"><%=rows[0].description %>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Image Carosel -->
+            <section class="my-16">
+                <div class="bg-white px-6 py-8 shadow-lg shadow-gray-400 rounded-xl">
+                    <h1 class="text-2xl font-bold text-primary-blue">Some More Similar Notes</h1>
+                    <hr class="border-[0.1rem] my-4">
+                    <div class="flex items-center justify-around gap-8">
+                        <button class="left-slide"><i
+                                class="fa-solid fa-angle-left text-3xl text-slate-500 hover:scale-125 hover:text-slate-600 ml-4 active:scale-95 duration-300 ease-in-out"></i></button>
+                        <div class="carosel-cards flex glider gap-8 w-full">
+                            <%for(let slide of slider) {%>
+                            <div
+                                class="card rounded-xl overflow-hidden shadow-lg shadow-slate-300 w-[20rem] h-92 hover:scale-110 duration-500 ease-in-out">
+                                <a href="/explore/<%=slide.id%>">
+                                    <img src="/post-images/<%=slide.images%>"
+                                        class="h-56 w-full object-cover object-top" alt="">
+                                </a>
+                                <div class="px-3 py-4 flex flex-col gap-3 w-full">
+                                    <div class="flex text-primary-blue-dark items-center">
+                                        <p class="text-primary-blue mr-2 text-md">Price : </p> <i
+                                            class="fa-solid fa-indian-rupee-sign text-xl"></i>
+                                        <p class=" text-xl font-bold ml-1"><%=slide.price%></p>
+                                    </div>
+                                    <div class="mt-6 ">
+                                        <div class=" text-primary-blue">
+                                            <p class="text-sm">Posted By :
+                                                <a href="/user/<%=slide.Googleid%>">
+                                                    <span class="font-bold">
+                                                        <%=slide.Name%></span>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <div class="mt-2 flex"><i class="fa-solid fa-star text-yellow-400 mr-1"></i>
+                                            <p class="text-xs font-bold text-primary-blue">4.5/5 | 100 Ratings</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%}%>
+                        </div>
+                        <button class="right-slide"><i
+                                class="fa-solid fa-angle-right text-3xl text-slate-500 hover:scale-125 hover:text-slate-600 mr-4 active:scale-95 duration-300 ease-in-out"></i></button>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+    <!-- notifications -->
+    <div class="notifications-container flex flex-col items-start fixed top-24 right-12 gap-4">
+
+    </div>
+    <!-- footer -->
+    <%-include('./utils/footer.ejs')%>
+
+                            <script>
+                                const notificationsContainer = document.querySelector('.notifications-container');
+                                function createNotifications() {
+                                    const notification = document.createElement('div');
+                                    notification.classList.add('notification-styles');
+
+                                    /* Get the text field */
+                                    let copyText = document.getElementById("myInput");
+
+                                    /* Copy the text inside the text field */
+                                    navigator.clipboard.writeText(copyText.value);
+                                    notification.innerText = " Phone  Number Copied : " + copyText.value;
+
+                                    notificationsContainer.appendChild(notification);
+                                    setTimeout(() => {
+                                        notification.remove();
+                                    }, 2000)
+                                }
+                            </script>
+</body>
+
+</html>
