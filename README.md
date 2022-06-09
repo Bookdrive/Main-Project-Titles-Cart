@@ -3,7 +3,7 @@
 BATCH 2020-2024
 <br/>
 <br/>
-20BCS043 Mohd Haider 
+20BCS043 Mohd Haider HEAD
 <br/>
 20BCS070 Vicky Gupta
 <br/>
@@ -13,7 +13,7 @@ BATCH 2020-2024
 <br/>
 20BEC005 Faiz Iqbal
 <br/>
-20BCS025 Fazeel Rizvi HEAD
+20BCS025 Fazeel Rizvi 
 <br/>
 20BCS037 Mohammad  Minhaj Khan
 <br/>
