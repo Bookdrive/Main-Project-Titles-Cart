@@ -3,11 +3,11 @@
 BATCH 2020-2024
 <br/>
 <br/>
-HEAD 20BCS043 Mohd Haider
+20BCS043 Mohd Haider HEAD
 <br/>
 20BCS070 Vicky Gupta
 <br/>
-20BEC002 AMIT KUMAR MISHRA 
+20BEC002 Amit Kumar Mishra
 <br/>
 20BCS012 Arish Anwar
 <br/>
@@ -18,3 +18,6 @@ HEAD 20BCS043 Mohd Haider
 20BCS037 Mohammad  Minhaj Khan
 <br/>
 20BCS035 Mohammad Aatir Nadim
+<br/>
+20BEE055 Mohd Arbaz Ali
+
