@@ -1,9 +1,9 @@
 # Main-Project-Titles-Cart
 
-BATCH 2020-2024
+**BATCH 2020-2024**
 <br/>
 <br/>
-20BCS043 Mohd Haider HEAD
+20BCS043 Mohd Haider **HEAD**
 <br/>
 20BCS070 Vicky Gupta
 <br/>
